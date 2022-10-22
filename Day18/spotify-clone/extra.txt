@@ -1,0 +1,119 @@
+Day 18 Spotify Clone 
+- authorization using spotify client service 
+- login using client id(which we get by spotify) and spotify generate access_token
+- if we get access token redirect to dashboard page
+- tailwind Setup
+- dev server using vite 
+
+Vite as bundle(merging into 1 file) for project
+development tool
+faster than create react app
+also use with vuejs vanilla javascript etc
+hot module replacement
+
+npm create vite@latest
+
+npm i 
+
+npm run dev
+
+add 
+"start":"vite --port 3000 --open --host" in scripts 
+to run on localhost 3000
+
+create src folder
+move counter index main style.css in it 
+
+we have to define a vite config 
+so these files picked up from src folder
+
+in terminal bash 
+touch vite.config.js
+
+https://vitejs.dev/config/
+copy code below Environment Variables  
+and paste it in vite.config.js
+
+in vite.config.js
+add root:"src"
+
+remove certain things 
+in file main.js
+
+remove counter.js javascript.svg vite.svg
+ 
+create dashboard  and login folder
+dashboard.html login.html 
+
+in main.js write dom content loaded
+
+Setup tailwind
+https://tailwindcss.com/docs/installation/using-postcss
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+
+remove everything from style.css 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+tell tailwind where our code is and 
+which type of files used to search for tailwind classes
+in tailwind.config.cjs
+add src path copy it from website
+
+create file postcss.config.cjs 
+and paste code from website 
+
+add link to style.css in login.html 
+add tailwind class in h1
+
+extension tailwind css intellisense 
+autocomplete tailwind and show color
+
+https://github.com/tailwindlabs/prettier-plugin-tailwindcss
+tailwind prettier sort the classes in recommended order
+
+npm install -D prettier prettier-plugin-tailwindcss
+(but not sort classes in my case)
+
+https://developer.spotify.com/dashboard/
+login 
+App name=Spotiy-Devsnest
+
+https://developer.spotify.com/documentation/general/guides/authorization/implicit-grant/
+
+create login.js
+in login.html add button and script
+
+in Redirect URIs
+add http://localhost:3000/login/login.html
+
+
+add content in login.js 
+
+check in console of window
+new URLSearchParams(window.location.hash).get("#access_token")
+
+Basicaly we do 
+login using spotify
+set access token in localStorage 
+and redirect to dashboard
+
+https://developer.spotify.com/console/get-featured-playlists/
+set access token and get response 
+
+json hero
+
+
+https://developer.spotify.com/console/get-browse-categories/
+
+
+https://developer.spotify.com/console/get-category-playlists/
+
+https://developer.spotify.com/documentation/general/design-and-branding/#using-our-colors
+
+
+tailwind configuration
+tailwind.config.cjs extend

@@ -1,0 +1,35 @@
+Create common.js file and
+export Access token, token type and expires in
+
+import and use them in login.js 
+
+Create .env and .env.development inside src folder
+add clientid and base url in .env 
+
+https://developer.spotify.com/console/get-browse-categories/
+VITE_API_BASE_URL
+
+redirect and app url in .env.development
+
+replace them in login.js using
+import.meta.env.YOUR_VALUE
+
+add .env* in gitignore
+
+add content in dashboard.html and styles in style.css 
+
+h-screen - to take entire height 
+text-primary - make custom class in tailwind
+
+grid-cols-2 : grid-template-columns: repeat(2, minmax(0, 1fr));
+
+The minmax() CSS function defines a size range greater 
+than or equal to min and less than or equal to max.
+
+grid-cols-[250px_1fr] : 1st column 250px, second column takes left space so we can write 1fr
+
+grid-rows-[1fr_1fr]: check space content takes, divide that into 2 equal parts
+grid-rows-[1fr_auto]: 1st column 1 fraction unit and second column takes space according to content but all
+available space 
+
+

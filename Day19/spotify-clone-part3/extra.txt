@@ -1,0 +1,18 @@
+change dashboard.js and dashboard.html 
+fetch display name for user not static
+add logout button 
+display logout button when click profile button 
+hide on toggle 
+also hide when click outside
+
+https://developer.spotify.com/console/get-featured-playlists/
+
+
+https://api.spotify.com/v1/browse/featured-playlists
+
+add in common.js
+
+add in dashboard.html dashboard.js 
+add in tailwind config
+
+create featured playlist section and fetch 5 playlist and display its cover data

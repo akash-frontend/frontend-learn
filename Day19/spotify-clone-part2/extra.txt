@@ -1,0 +1,17 @@
+https://open.spotify.com/
+
+work on navbar 
+make border, button hover profile section 
+add more custom color in tailwind config
+
+
+https://heroicons.com/
+profile
+
+triangle symbol html
+dashboard.js 
+link with dashboard.html
+
+
+(DATE.now() + (expiresIn *1000))
+current date in milliseconds + expiresIn value in milliseconds
