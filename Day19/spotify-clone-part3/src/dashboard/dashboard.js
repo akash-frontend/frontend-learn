@@ -5,7 +5,7 @@ const onProfileClick = (event) => {
     event.stopPropagation();
     const profileMenu = document.querySelector("#profile-menu") 
     profileMenu.classList.toggle("hidden")  
-    if(profileMenu.classList.contains("hidden")){
+    if(!profileMenu.classList.contains("hidden")){
         profileMenu.querySelector("li#logout").addEventListener("click",logout)
     }
 }
@@ -33,6 +33,7 @@ const onPlaylistItemClicked = (event) => {
 
 const loadFeaturedPlaylist = async () => {
     const {playlists:{items}} = await fetchRequest(ENDPOINT.featuredPlaylist)
+    console.log(items);
     const playlistItemsSection = document.querySelector("#featured-playlist-items")
     for(let {name, description, images,id} of items){
         const playlistItem = document.createElement("section");

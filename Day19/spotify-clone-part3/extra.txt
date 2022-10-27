@@ -16,3 +16,7 @@ add in dashboard.html dashboard.js
 add in tailwind config
 
 create featured playlist section and fetch 5 playlist and display its cover data
+
+
+event.stopPropagation();
+prevent event to go inside child or parent container

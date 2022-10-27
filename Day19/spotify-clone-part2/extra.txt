@@ -9,9 +9,41 @@ https://heroicons.com/
 profile
 
 triangle symbol html
-dashboard.js 
-link with dashboard.html
 
+
+Date.now() method returns the number of milliseconds elapsed since January 1, 1970
+January 1, 1970 refrence point browser think time starts
+
+console.log(Date.now())  //1666851163667
+expiresIn                //3600
+To convert expiresIn milliseconds to 1 hr
+expiresIn * 1000         //3600000 => 1hr
+(for 2 hr,use 2000)
 
 (DATE.now() + (expiresIn *1000))
 current date in milliseconds + expiresIn value in milliseconds
+current milliseconds passed +  1hr
+=> After 1  hour token expire
+
+
+
+
+
+
+srcset defines the set of images we will allow the browser to choose between, 
+and what size each image is. Each set of image information is 
+separated from the previous one by a comma
+
+
+
+
+
+
+
+https://developer.spotify.com/documentation/general/guides/authorization/scopes/
+
+user-top-read :
+Read access to a user's top artists and tracks.
+
+user-follow-read
+Read access to the list of artists and other users that the user follows.
