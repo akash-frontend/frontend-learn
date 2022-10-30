@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Intro</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.18.0/babel.js"></script>
+    <script type="text/babel">
+      const handleClick = () => {
+        alert("element clicked");
+      };
+      const root = document.getElementById("root");
+      const Greeting = ({onClick,message}) => <span onClick={onClick}>{message}</span>;
+
+      const element = (
+        <>
+          <Greeting message="Hello" onClick={handleClick} />
+          <Greeting message="Students 🧨"></Greeting>
+          <Greeting message="What's up!" />
+        </>
+      );
+      ReactDOM.render(element, root);
+    </script>
+</body>
+</html>

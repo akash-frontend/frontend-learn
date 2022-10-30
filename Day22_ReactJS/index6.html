@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Intro</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.18.0/babel.js"></script>
+    <!-- babel allows us to use jsx -->
+    <!-- jsx allows you to write html in javascript  -->
+    <script type="text/babel">
+      const root = document.getElementById("root");
+      const element = (
+      <div className="container">
+            This is ReactJS
+        <span>Let's Start</span>
+        </div>
+      )
+      ReactDOM.render(element, root);
+    //   inside head in browser elements tab there is script 
+    //   where it convert jsx into the syntax like create element 
+    // Also we check how babel convert jsx into normal react code 
+    // by using babeljs.io website
+
+    // Try converting this 
+    // const root = document.getElementById("root");
+    //   const element = (
+    //   <div className="container">
+    //         This is ReactJS
+    //     <span>Let's Start</span>
+    //     </div>
+    //   )
+    </script>
+</body>
+</html>

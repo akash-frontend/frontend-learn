@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Intro</title>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- These files from unpkg.com 
+    to get all necessary script files necessary to load react directly 
+    other way to create is to install react and react dom files using npm  -->
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script>
+
+      const root = document.getElementById("root");
+      const element = React.createElement(
+      "div",{
+      className:"container",
+      children:"This is React",
+      });
+      ReactDOM.render(element, root);
+      // The ReactDOM.render() function takes two arguments, HTML code and an HTML element.
+      // The purpose of the function is to display the specified HTML code inside the specified HTML element.
+    </script>
+</body>
+</html>
