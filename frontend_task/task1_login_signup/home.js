@@ -6,7 +6,7 @@ if(localStorage.getItem("loginUserName")){
     userName.textContent = localStorage.getItem("loginUserName")
 }
 else{
-    userName.textContent = "User not logined"
+    window.location.href = "login.html"
 }
 
 const changeMode = () =>  {
