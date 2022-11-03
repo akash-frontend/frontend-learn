@@ -11,7 +11,7 @@ const loginEmail = document.querySelector('.login-email');
 const loginPassword = document.querySelector('.login-password');
 
 const registerSuccess = document.querySelector('.register-success');
-var registerCheck=false;
+var registerCheck=[];
 var required;
 var passwordCheck=""
 var loginCheck;
@@ -68,49 +68,66 @@ function checkInputs() {
     const passwordValue = password.value.trim();
     const confirmPasswordValue = confirmPassword.value.trim(); 
   
+    var isUserNameError,isEmailError,isPassError,isConfirmPassError;
+
     if (userNameValue === ""){
         showError(userName, "User Name cannot be empty");
+        isUserNameError = true
     }
     else if (userNameValue.length<=5) {
       showError(userName, "User name is too short");
+      isUserNameError = true
     } else {
       removeError(userName);
+      isUserNameError = false
     };
   
     if (emailValue === "") {
         showError(email, "Email cannot be empty");
+        isEmailError = true
     }
     else if (!checkEmail(emailValue)) {
         showError(email, "Looks like this is not an email");
+        isEmailError = true
     } else {
         removeError(email);
+        isEmailError = false
     };
   
     passError = checkPassword(passwordValue)
     if (passwordValue === "") {
         showError(password, "Password cannot be empty");
+        isPassError = true
     }
     else if(passError){
         showError(password, passError);
+        isPassError = true
     } else {
         passwordCheck = passwordValue
       removeError(password);
+      isPassError = false
     };
     
     if(confirmPasswordValue=== ""){
         showError(confirmPassword, "Password cannot be empty");
+        isConfirmPassError = true
     }
     else if(!passwordCheck){
         showError(confirmPassword, "");
+        isConfirmPassError = true
     }
     else if(!(confirmPasswordValue==passwordCheck)){
         showError(confirmPassword, "Please write same password in both fields");
+        isConfirmPassError = true
     }
     else{
         removeError(confirmPassword);
+        isConfirmPassError = false
     }
 
-    if(registerCheck){
+    registerCheck = [isUserNameError,isEmailError,isPassError,isConfirmPassError]
+
+    if(!registerCheck.includes(true)){
         localStorage.setItem("userEmail",emailValue);
         localStorage.setItem("userPassword",confirmPasswordValue);
         localStorage.setItem("loginUserName",userNameValue);
@@ -125,7 +142,6 @@ function checkInputs() {
 
     errorMessage.innerText = message;
     formComponent.classList.add('not-valid');
-    registerCheck = false
     loginCheck = false
   }
   
@@ -133,7 +149,6 @@ function checkInputs() {
   function removeError(input) {
     const formComponent = input.parentElement;
     formComponent.classList.remove('not-valid');
-    registerCheck = true
     loginCheck = true
   };
     
@@ -191,6 +206,7 @@ required = [userName, email, password,confirmPassword];
     input.addEventListener('input', () => {
         if (input.value) {
             removeError(input);
+            registerSuccess.textContent = "";
     }})
 })  
 
