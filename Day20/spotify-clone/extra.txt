@@ -1,0 +1,13 @@
+add more colors in tailwind config
+
+loadPlaylist change in dashboard.js
+add toplist in common.js 
+
+toplist in dashboard.js 
+add section in dashboard.html
+
+
+line clamp plugin of tailwind
+https://tailwindcss.com/blog/multi-line-truncation-with-tailwindcss-line-clamp
+
+npm install @tailwindcss/line-clamp

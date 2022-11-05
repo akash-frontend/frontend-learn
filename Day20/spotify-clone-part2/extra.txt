@@ -1,0 +1,6 @@
+https://developer.spotify.com/documentation/general/guides/authorization/use-access-token/
+
+change in main.js
+
+https://developer.spotify.com/console/get-playlist/
+change in common.js  
