@@ -1,0 +1,8 @@
+ https://developer.spotify.com/console/get-featured-playlists/
+ add access token and from result choose any id for playlist
+
+icons
+ https://www.w3schools.com/charsets/ref_utf_geometric.asp
+ 
+ 
+ https://fonts.google.com/icons?icon.query=pause&icon.style=Outlined&icon.platform=web
