@@ -1,2 +1,2 @@
 ## Deployed Site
-https://akash-frontend-task1.netlify.app/login.html
+https://akash-login-signup.netlify.app/login.html
