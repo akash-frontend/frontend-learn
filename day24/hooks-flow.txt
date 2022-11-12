@@ -1,0 +1,114 @@
+Virtual DOM
+
+It is a virtual representation of the UI (copy of DOM) kept in memory and synced with the real DOM by a library like ReactDOM
+
+Why need virtual dom? 
+updating the whole DOM on every prop/state change is very inefficient
+Change only that part of dom tree which is changed not the whole dom tree by maintaining  a virtual dom
+
+
+
+
+React hooks flow diagram
+
+Mount 
+mounted means the component has been loaded to the DOM
+(Component created and inserted into the DOM).
+Mounting" is when React "renders" the component for the first time and actually builds the initial DOM 
+
+
+1. Run Lazy Initializers
+(lazy initial state) 
+
+const [state, setState] = useState(getInitialHundredItems())
+On first render it will set value in state which is returned by calling getInitialHundredItems function
+
+On next render even though the initial value of state is disregarded , the function which initializes it still gets called
+
+So we do lazy initialization in usestate hook to set the initial value so that function will not get called on next render 
+Like this:
+const [state, setState] = useState(getInitialHundredItems)
+
+Lazy initializers are functions that we pass to useState and useReducer. Those functions will be run only in this mount stage
+
+2. Render
+rendering is the process where it collecting the current state, props, structure from the component and creates a new virtual dom for that render. 
+
+3. React updates DOM
+The process of checking the difference between the new VDOM tree and the old VDOM tree is called "diffing
+
+react compares virtual DOM with the real DOM and updates the changes. This process is called reconciliation.
+
+4. Run Layout Effects
+Layout = arrangement of elements on the screen
+We can do layout effects using uselayoutEffect
+hook. It has similar syntax as useEffect
+
+UseEffect is asynchronous so it will not delay painting the dom to the browser 
+For ex we have an api and we want to display their data
+Without useEffect if we call the api function synchronously
+During api call until we didn't get any data or error
+During that time nothing is shown on the screen 
+But we want during that time it shows like loading on the screen so want something to work asynchronously so there we use useEffect
+
+Uselayout effect is synchronous so it will delay painting the dom to the browser 
+It's want to run the code before painting to the browser 
+
+When we use uselayout effect? 
+Like we have
+counter value and counter button
+On press button we want first it changes it's position and then update the counter value
+If we use useEffect it first update counter value then move it but we want opposite of this
+So we use uselayouteffect
+
+Or we create interval in uselayouteffect 
+So that display data after 2 seconds
+
+
+5. Browser paints the screen
+dom structure is already changed 
+Now browser show it to the screeen
+
+6. Run Effects
+Using useEffect hook
+Perform effect like performing api calls
+or timer event using setTimeout etc
+
+Update
+Update happens like if we change state
+component is rerender 
+Context changes
+
+1. Render
+(Or rerender) 
+Now we already virtual dom for component in mounting phase 
+If any state or prop change then it will update the virtual dom
+
+2  React Updates Dom
+
+3. Cleanup Layout Effects 
+Cleanup effects made by uselayoutEffect hook
+Like we remove the interval we add in uselayouteffect hook in mounting phase
+
+4. Run Layout Effects
+In 3. We cleared old layout effects and here we create new ones 
+
+5 . Browser paints the screen
+
+6. Cleanup Effects
+Cleanup effects made by useEffect hook
+We do this to provide memory leakage
+so that it will not slow our application
+
+7. Run Effects
+Create new effects like in 6 we remove existing event listener and here we create new same event listener but with other value( or calling other function) 
+
+
+Unmount
+This stage is when the component unmounts from a page.
+Means component remove from the dom 
+Like in routing we remove one component(unmount) and show(mount) other component
+
+
+1. Cleanup Layout Effects 
+2. Cleanup Effects

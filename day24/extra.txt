@@ -1,0 +1,13 @@
+npm install -g pnpm
+pnpm create vite
+
+npm run dev
+
+
+
+performant npm (pnpm)
+its main objective to reduce the number of packages installed on your local machine
+and to speed up the installation of packages.
+https://medium.com/jobtome-engineering/pnpm-because-to-work-more-flexible-we-start-from-the-bottom-5a9c3a9c2af4
+
+
