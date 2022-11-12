@@ -1,3 +1,6 @@
+Diagram Link: https://raw.githubusercontent.com/donavon/hook-flow/master/hook-flow.png
+
+
 Virtual DOM
 
 It is a virtual representation of the UI (copy of DOM) kept in memory and synced with the real DOM by a library like ReactDOM
