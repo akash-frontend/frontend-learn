@@ -41,9 +41,6 @@ export default class Products extends Component {
 
   componentWillUnmount() {
     // clean up logic will come inside this function
-    // it will call before fetching data or add event listener in componentDidMount only
-    // to cleanup old effects 
-    // also call when remove or hide component
     console.log("unmount");
   }
 
