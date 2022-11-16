@@ -14,11 +14,6 @@ import React, { Component } from "react";
 // this is uninitialized if super() is not called
 // also used to get props from parent component
 
-// why need super?
-// because  this.state is defined in Component class constructor 
-// we override Component constructor with our constructor 
-// so to get access of this of parent Component class 
-// we need super 
 
 export default class Products extends Component {
   constructor() {
