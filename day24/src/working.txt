@@ -1,0 +1,22 @@
+render 
+usestate
+renderend
+useEffect all 3
+ 
+on state change
+render 
+renderend
+
+if dependency is same as state which is changed
+useeffects cleanup no deps
+useeffect no deps
+
+else
+useeffects cleanup no deps and deps
+useeffect deps and no deps
+
+ 
+
+
+
+

@@ -1,0 +1,31 @@
+Parent With Child Component
+
+
+render 
+usestate
+renderend
+useEffect
+
+on state change
+render 
+renderend
+Child render
+child useState
+Child renderend
+
+useeffects cleanup no deps and deps
+Child useeffects 
+useeffect deps and no deps
+
+if child state change
+Child render
+Child renderend
+Child useEffect cleanup deps and no deps
+Child useEffect deps and no deps
+
+if parent state change
+render 
+renderend
+Child useEffect cleanup deps,empty and no deps
+useeffects cleanup no deps and deps
+useeffects no deps and deps
