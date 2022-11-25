@@ -1,0 +1,34 @@
+pnpm create vite
+
+
+Material UI 
+Library which have built in components, follow
+guidelines of google material ui design
+It uses emotion library inside it
+
+pnpm install @mui/material @emotion/react @emotion/styled
+pnpm install @fontsource/roboto
+
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
+https://mui.com/material-ui/getting-started/usage/
+
+
+pnpm add react-router-dom
+
+pnpm install @mui/icons-material
+
+https://mui.com/material-ui/material-icons/?query=shoppi&selected=ShoppingCart
+
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+
+https://mui.com/material-ui/customization/breakpoints/
+
+https://mui.com/material-ui/react-grid/#main-content
+
+
+ 
