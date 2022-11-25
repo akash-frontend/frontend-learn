@@ -1,0 +1,7 @@
+pnpm create vite
+pnpm install
+pnpm run dev
+pnpm add -D @emotion/babel-plugin
+pnpm add @emotion/react
+add plugin in vite config
+
