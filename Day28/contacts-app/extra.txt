@@ -1,0 +1,13 @@
+pnpm create vite
+pnpm install
+pnpm run dev
+pnpm add -D @emotion/babel-plugin
+pnpm add @emotion/react
+add plugin in vite config
+pnpm add react-router-dom
+
+
+Random user data api
+https://randomuser.me/documentation
+
+https://jsonhero.io/j/U2Zrp4YdtgYY
